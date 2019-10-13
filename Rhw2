@@ -1,0 +1,22 @@
+#九九乘法表
+
+for(j in 1:9){
+  for(i in 1:9){
+ cat(i,"*",j,"=",i*j,"")
+ }
+cat("\n")
+}
+#樣本變異數
+SVAR=function(data){ 
+    ss=0
+    result=0
+    for(i in 1:length(data))
+    {
+    n=length(data)
+    result=result+data[i]
+    ss=ss+(data[i])^2
+    aa=(result)^2/n
+    }
+    result=(ss-aa)/(n-1)
+    return(result)
+}
